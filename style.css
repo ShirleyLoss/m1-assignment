@@ -5,6 +5,15 @@
 	margin: 5px 0px;
 }
 
+h3 {
+    margin-top: 2em;
+    background-color: #ffebdd;
+    text-align: center;
+}
+p {
+    text-indent: 30px;
+}
+
 #container {
     width: 80%;
     /* background-color: orange; */
@@ -70,4 +79,41 @@ main section ul li p {
     margin-left: 20px;
 }
 
-/**/
+/* Table Section */
+
+table {
+    width: 1000px;
+    margin: 1em auto 0 auto;
+    text-align: center;
+}
+caption {
+    background-color: #002734;
+    height: 40px;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-top: 1em;
+}
+thead {
+    font-weight: bold;
+    background-color: #80d4ef;
+}
+tbody {
+    background-color: #e6f6fc;
+}
+th,td {
+    width: 225px;
+    height: 75px;
+    vertical-align: middle;
+    border: solid 1px #002734;
+}
+th:first-child {
+    width: 125px;
+    height: 50px;
+    background-color: #00a8de;
+    color: #fff;
+}
+td:first-child {
+    font-weight: bold;
+    background-color: #80d4ef;
+}
