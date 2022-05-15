@@ -57,9 +57,9 @@ nav ul li a{
 nav ul li:hover {
     background-color: #006889;
 }
-main section ul{
+/* main section ul{
 
-}
+} */
 main section ul li {
     list-style-type: None;
     display: inline-block;
@@ -116,4 +116,65 @@ th:first-child {
 td:first-child {
     font-weight: bold;
     background-color: #80d4ef;
+}
+
+/* Form Section */
+fieldset {
+    border: 1px solid #00a8de;
+}
+legend {
+    margin-left: 1em;
+}
+label {
+    display: block;
+    margin-left: 1em;
+    margin-bottom: 0px;
+}
+input {
+    width: 500px;
+    margin: 0 auto 1em 1em;
+}
+input[type="radio"] {
+    width: 25px;
+}
+textarea {
+    width: 500px;
+}
+input[type="submit"] {
+    display: block;
+    margin: 20px 0 10px 1em;
+    width: 100px;
+}
+.contact_Method_Class {
+    display: inline;
+    margin-top: 5px;
+    margin-left: 2px;
+}
+#contactMethodEmail {
+    margin-left: 1em;
+    margin-top: 5px;
+}
+#contactMethodPhone {
+    margin-left: 1em;
+    margin-top: 5px;
+}
+input[type="radio"] {
+    margin-right: 1px;
+}
+.why_Volunteer {
+    margin-top: 1em;
+}
+textarea {
+    margin-left: 1em;
+}
+
+/* Form Section - Adoption_info html */
+input[type="checkbox"] {
+    width: 25px;
+    display: inline;
+}
+input[type="text"] {
+    display: block;
+    margin: 0px 0px 0px 1em;
+    width: 500px;
 }

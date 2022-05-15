@@ -31,27 +31,24 @@
                 <fieldset>
                     <legend>Signup for Volunteer</legend>
 
-                    <label>Enter your full name</label><br>
-                    <input type="text" name="name"><br>
+                    <label>Enter your full name</label>
+                    <input type="text" name="name">
 
-                    <label>Enter your email</label><br>
-                    <input type="email" name="email"><br>
+                    <label>Enter your email</label>
+                    <input type="email" name="email">
 
-                    <label>Enter your phone</label><br>
-                    <input type="tel" name="phone"><br>
-                    <br>
+                    <label>Enter your phone</label>
+                    <input type="tel" name="phone">
 
-                    <label>How should we contact you?</label><br>
-                    <input type="radio" name="contact" value="contact_Email">
-                    <label>Email</label>
-                    <input type="radio" name="contact" value="contact_Phone">
-                    <label>Phone</label><br>
+                    <label>How should we contact you?</label>
+                    <span class="contact_Method_Class" id="contactMethodEmail">Email</span>
+                    <input class="contact_Method_Class" type="radio" name="contact" value="contact_Email">
+                    <span class="contact_Method_Class" id="contactMethodPhone">Phone</span>
+                    <input class="contact_Method_Class" type="radio" name="contact" value="contact_Phone">
 
-                    <br>
-                    <label>Why do you sign up for volunteer?</label><br>
-                    <textarea name="reason_For_Volunteer" cols="30" rows="3"></textarea><br>
+                    <label class="why_Volunteer">Why do you sign up for volunteer?</label>
+                    <textarea name="reason_For_Volunteer" cols="30" rows="3"></textarea>
 
-                    <br>
                     <input type="submit" value="Signup">
                 </fieldset>
             </form>
