@@ -184,6 +184,7 @@ td:first-child {
 }
 #adoption_Info #cat_Adoption_Photo li img{
     margin: 0px;
+    /* border: 2px solid #ffebdd; */
 }
 #adoption_Info #cat_Adoption_Photo li .caption{
     display: block;

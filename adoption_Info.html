@@ -169,7 +169,7 @@
             var closeDescTag = "</span>";
             var descs = [];
             var image;
-            var openList = "<li class='Photo'>";
+            var openList = "<li id='photo";
             var closeList = "</li>";
             var imageList = [];
 
@@ -177,8 +177,9 @@
                 photos.push("<img src='images/" + fileNames[i] + ".jpeg' alt='" + fileNames[i]+"'>");
                 captions.push(openCaptionTag + fileNames[i] + closeCaptionTag);
                 descs.push(openDescTag + "Photo for " + fileNames[i] + closeDescTag);
-                image = openList + photos[i] + captions[i] + descs[i] + closeList;
+                image = openList + i +"'>" + photos[i] + captions[i] + descs[i] + closeList;
                 imageList.push(image);
+                console.log(image);
             }
 
             document.getElementById("cat_Adoption_Photo").innerHTML = imageList;
