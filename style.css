@@ -170,6 +170,43 @@ td:first-child {
     font-weight: bold;
     background-color: #80d4ef;
 }
+/* Table Section End */
+
+/* Photo Section in Adoption_Info page */
+
+#adoption_Info #cat_Adoption_Photo{
+    margin: 10px 20px;
+}
+#adoption_Info #cat_Adoption_Photo li {
+    list-style-type: None;
+    display: inline-block;
+    margin: 10px;
+}
+#adoption_Info #cat_Adoption_Photo li img{
+    margin: 0px;
+}
+#adoption_Info #cat_Adoption_Photo li .caption{
+    display: block;
+    text-align: center;
+    background-color: #ffebdd;
+    margin-top: 0px;
+}
+#adoption_Info #cat_Adoption_Photo li .description{
+    float: left;
+    position: relative;
+    left: 20%;
+    top: -170px;
+    background-color: #ffebdd;
+    opacity: 0.7;
+    margin-top: 0px;
+    padding: 10px;
+    visibility: hidden;
+}
+#adoption_Info #cat_Adoption_Photo li img:hover ~.description{
+    visibility: visible;
+}
+
+/* Photo Section in Adoption_Info page End*/
 
 /* Form Section */
 fieldset {
@@ -178,7 +215,7 @@ fieldset {
 legend {
     margin-left: 1em;
 }
-label {
+form label {
     display: block;
     margin-left: 1em;
     margin-bottom: 0px;

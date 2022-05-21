@@ -9,7 +9,7 @@
     <title>Adopt the Perfect Cat</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="adoption_Info">
     <div id="container">
         <Header>
             <h1>Adopt your Perfect Cat</h1>
@@ -79,36 +79,56 @@
             <!-- Image Area -->
             <section>
                 <ul id="cat_Adoption_Photo">
-                    <li class="Photo">
+                    <!-- <li class="Photo">
                         <img src="images/Fifi.jpeg" alt="Fifi">
+                        <label class="caption">Fifi</label>
+                        <span class="description">Photo for Fifi</span>
                     </li>
                     <li class="Photo">
                         <img src="images/Toothless.jpeg" alt="Toothless">
+                        <label class="caption">Toothless</label>
+                        <span class="description">Photo for Toothless</span>
                     </li>
                     <li class="Photo">
                         <img src="images/Henry.jpeg" alt="Henry">
+                        <label class="caption">Henry</label>
+                        <span class="description">Photo for Henry</span>
                     </li>
                     <li class="Photo">
                         <img src="images/Marvin.jpeg" alt="Marvin">
+                        <label class="caption">Marvin</label>
+                        <span class="description">Photo for Marvin</span>
                     </li>
                     <li class="Photo">
                         <img src="images/Rosie.jpeg" alt="Rosie">
+                        <label class="caption">Rosie</label>
+                        <span class="description">Photo for Rosie</span>
                     </li>
                     <li class="Photo">
                         <img src="images/Jasper.jpeg" alt="Jasper">
+                        <label class="caption">Jasper</label>
+                        <span class="description">Photo for Jasper</span>
                     </li>
                     <li class="Photo">
                         <img src="images/Mini.jpeg" alt="Mini">
+                        <label class="caption">Mini</label>
+                        <span class="description">Photo for Mini</span>
                     </li>
                     <li class="Photo">
                         <img src="images/Dexter.jpeg" alt="Dexter">
+                        <label class="caption">Dexter</label>
+                        <span class="description">Photo for Dexter</span>
                     </li>
                     <li class="Photo">
                         <img src="images/Billiam.jpeg" alt="Billiam">
+                        <label class="caption">Billiam</label>
+                        <span class="description">Photo for Billiam</span>
                     </li>
                     <li class="Photo">
                         <img src="images/Sahara.jpeg" alt="Sahara">
-                    </li>
+                        <label class="caption">Sahara</label>
+                        <span class="description">Photo for Sahara</span>
+                    </li> -->
                 </ul>
             </section>
             <!-- Image Area End -->
@@ -138,6 +158,32 @@
             </div>
         </footer>
         <!-- Footer Area -->
+
+        <script>
+            var fileNames = ["Fifi", "Toothless", "Henry", "Marvin", "Rosie", "Jasper", "Mini", "Dexter", "Billiam", "Sahara"];
+            var photos = [];
+            var openCaptionTag = "<label class='caption'>";
+            var closeCaptionTag = "</label>"
+            var captions = [];
+            var openDescTag = "<span class='description'>";
+            var closeDescTag = "</span>";
+            var descs = [];
+            var image;
+            var openList = "<li class='Photo'>";
+            var closeList = "</li>";
+            var imageList = [];
+
+            for (i = 0; i < 10; i++) {
+                photos.push("<img src='images/" + fileNames[i] + ".jpeg' alt='" + fileNames[i]+"'>");
+                captions.push(openCaptionTag + fileNames[i] + closeCaptionTag);
+                descs.push(openDescTag + "Photo for " + fileNames[i] + closeDescTag);
+                image = openList + photos[i] + captions[i] + descs[i] + closeList;
+                imageList.push(image);
+            }
+
+            document.getElementById("cat_Adoption_Photo").innerHTML = imageList;
+            
+        </script>
 
     </div>
     
