@@ -57,10 +57,10 @@ nav ul li a{
 nav ul li:hover {
     background-color: #006889;
 }
-/* main section ul{
-
-} */
-main section ul li {
+#index main section ul{
+    text-align: center;
+}
+#index main section ul li {
     list-style-type: None;
     display: inline-block;
     margin-left: 20px;
@@ -70,11 +70,11 @@ main section ul li {
     border: 2px solid #888;
     border-radius: 20px;
 }
-main section ul li img{
+#index main section ul li img{
     border-radius: 20px;
     /* transform: scale(105%); */
 }
-main section ul li p {
+#index main section ul li p {
     margin-top: 10px;
     margin-left: 20px;
 }
