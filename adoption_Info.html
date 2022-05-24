@@ -177,12 +177,17 @@
                 photos.push("<img src='images/" + fileNames[i] + ".jpeg' alt='" + fileNames[i]+"'>");
                 captions.push(openCaptionTag + fileNames[i] + closeCaptionTag);
                 descs.push(openDescTag + "Photo for " + fileNames[i] + closeDescTag);
-                image = openList + i +"'>" + photos[i] + captions[i] + descs[i] + closeList;
+                image = openList + (i+1) +"'>" + photos[i] + captions[i] + descs[i] + closeList;
                 imageList.push(image);
-                console.log(image);
+                // console.log(image);
             }
 
-            document.getElementById("cat_Adoption_Photo").innerHTML = imageList;
+            var imageListStr = "";
+            for (i=0; i<10; i++) {
+                imageListStr += imageList[i];
+            }
+
+            document.getElementById("cat_Adoption_Photo").innerHTML = imageListStr;
             
         </script>
 
