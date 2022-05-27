@@ -83,6 +83,9 @@
                         <img src="images/Sahara.jpeg" alt="Sahara">
                         <label class="caption">Sahara</label>
                         <span class="description">Photo for Sahara</span>
+                        <span class="info_box">
+                            <h2></h2>
+                        </span>
                     </li> -->
                 </ul>
             </section>
@@ -115,6 +118,7 @@
         <!-- Footer Area -->
 
         <script>
+            var photoTitle = "";
             var fileNames = ["Fifi", "Toothless", "Henry", "Marvin", "Rosie", "Jasper", "Mini", "Dexter", "Billiam", "Sahara"];
             var photos = [];
             var openCaptionTag = "<label class='caption'>";
@@ -127,12 +131,30 @@
             var openList = "<li id='photo";
             var closeList = "</li>";
             var imageList = [];
+            //Info box var
+            var infoBoxOpen = "<span class='info_box'>";
+            var infoBoxClose = "</span>";
+            var h4Open = "<h4>";
+            var h4Close = "</h4>";
+            var infoBoxArr = ["I am a very sweet, silly, and smart cat!", " Some of my favorite hobbies include getting cheek scratches, chasing a wand toy, and munching on tasty fishy treats!", " I enjoy tall perches!", "I enjoy tall perches!", "I like to sunbathe! There's nothing better than a great cat-nap in a warm sunny spot!", "I have a natural smile!"];
+            var infoBoxPOpen = "<p class='info_box_p'>"
+            var infoBoxPClose = "</p>"
+            var infoBoxP1 = "";
+            var infoBoxP2 = "";
+            var infoBoxClickClose = "<p class='infoBoxClickClose'>Click This To Close</p>";
+            var photoInfo = ""
 
             for (i = 0; i < 10; i++) {
+                photoTitle = "Photo for " + fileNames[i]
+                //Photo combination
                 photos.push("<img src='images/" + fileNames[i] + ".jpeg' alt='" + fileNames[i]+"'>");
                 captions.push(openCaptionTag + fileNames[i] + closeCaptionTag);
-                descs.push(openDescTag + "Photo for " + fileNames[i] + closeDescTag);
-                image = openList + (i+1) +"'>" + photos[i] + captions[i] + descs[i] + closeList;
+                descs.push(openDescTag + photoTitle + closeDescTag);
+                // Info box combination
+                infoBoxP1 = infoBoxArr[i%5];
+                infoBoxP2 = infoBoxArr[(i+1)%5]; 
+                photoInfo = infoBoxOpen + h4Open + photoTitle + h4Close + infoBoxPOpen + infoBoxP1 + infoBoxPClose + infoBoxPOpen + infoBoxP2 + infoBoxPClose + infoBoxClickClose + infoBoxClose;
+                image = openList + (i+1) +"'>" + photos[i] + captions[i] + descs[i] + photoInfo + closeList;
                 imageList.push(image);
                 // console.log(image);
             }
