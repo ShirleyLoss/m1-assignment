@@ -21,7 +21,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="adoption_Info.html">Adoption Info</a></li>
-                <li><a href="">Cat Care & Health</a></li>
+                <li><a href="gallery.html">Cat Gallery</a></li>
                 <li><a href="signup.html">Signup</a></li>
             </ul>
         </nav>
@@ -39,11 +39,11 @@
             <!-- Cat Adopting Info Area -->
             <section>
                 <ul id="cat_Adopting_Info">
-                    <li>Adopt a Watch Buddy for FearFest</li>
-                    <li>10 Things To Consider Before Adopting A Pet</li>
-                    <li>Why there is a Fee For Adoption</li>
-                    <li>Shelter, SPCA, humane society or rescue – what’s the difference?</li>
-                    <li>Chemistry: picking the right pet for you</li>
+                    <li class="adoptTips">Adopt a Watch Buddy for FearFest</li>
+                    <li class="adoptTips">10 Things To Consider Before Adopting A Pet</li>
+                    <li class="adoptTips">Why there is a Fee For Adoption</li>
+                    <li class="adoptTips">Shelter, SPCA, humane society or rescue – what’s the difference?</li>
+                    <li class="adoptTips">Chemistry: picking the right pet for you</li>
                 </ul>
             </section>
             <!-- Cat Adopting Info Area End -->
@@ -76,63 +76,6 @@
             </form>
             <!-- Search Cat Form Area End -->
 
-            <!-- Image Area -->
-            <section>
-                <ul id="cat_Adoption_Photo">
-                    <!-- <li class="Photo">
-                        <img src="images/Fifi.jpeg" alt="Fifi">
-                        <label class="caption">Fifi</label>
-                        <span class="description">Photo for Fifi</span>
-                    </li>
-                    <li class="Photo">
-                        <img src="images/Toothless.jpeg" alt="Toothless">
-                        <label class="caption">Toothless</label>
-                        <span class="description">Photo for Toothless</span>
-                    </li>
-                    <li class="Photo">
-                        <img src="images/Henry.jpeg" alt="Henry">
-                        <label class="caption">Henry</label>
-                        <span class="description">Photo for Henry</span>
-                    </li>
-                    <li class="Photo">
-                        <img src="images/Marvin.jpeg" alt="Marvin">
-                        <label class="caption">Marvin</label>
-                        <span class="description">Photo for Marvin</span>
-                    </li>
-                    <li class="Photo">
-                        <img src="images/Rosie.jpeg" alt="Rosie">
-                        <label class="caption">Rosie</label>
-                        <span class="description">Photo for Rosie</span>
-                    </li>
-                    <li class="Photo">
-                        <img src="images/Jasper.jpeg" alt="Jasper">
-                        <label class="caption">Jasper</label>
-                        <span class="description">Photo for Jasper</span>
-                    </li>
-                    <li class="Photo">
-                        <img src="images/Mini.jpeg" alt="Mini">
-                        <label class="caption">Mini</label>
-                        <span class="description">Photo for Mini</span>
-                    </li>
-                    <li class="Photo">
-                        <img src="images/Dexter.jpeg" alt="Dexter">
-                        <label class="caption">Dexter</label>
-                        <span class="description">Photo for Dexter</span>
-                    </li>
-                    <li class="Photo">
-                        <img src="images/Billiam.jpeg" alt="Billiam">
-                        <label class="caption">Billiam</label>
-                        <span class="description">Photo for Billiam</span>
-                    </li>
-                    <li class="Photo">
-                        <img src="images/Sahara.jpeg" alt="Sahara">
-                        <label class="caption">Sahara</label>
-                        <span class="description">Photo for Sahara</span>
-                    </li> -->
-                </ul>
-            </section>
-            <!-- Image Area End -->
-
             <img src="images/cat_Adopting_Info_Area_Photo.jpeg" alt="Cute Cat Photo">
 
         </main>
@@ -158,38 +101,6 @@
             </div>
         </footer>
         <!-- Footer Area -->
-
-        <script>
-            var fileNames = ["Fifi", "Toothless", "Henry", "Marvin", "Rosie", "Jasper", "Mini", "Dexter", "Billiam", "Sahara"];
-            var photos = [];
-            var openCaptionTag = "<label class='caption'>";
-            var closeCaptionTag = "</label>"
-            var captions = [];
-            var openDescTag = "<span class='description'>";
-            var closeDescTag = "</span>";
-            var descs = [];
-            var image;
-            var openList = "<li id='photo";
-            var closeList = "</li>";
-            var imageList = [];
-
-            for (i = 0; i < 10; i++) {
-                photos.push("<img src='images/" + fileNames[i] + ".jpeg' alt='" + fileNames[i]+"'>");
-                captions.push(openCaptionTag + fileNames[i] + closeCaptionTag);
-                descs.push(openDescTag + "Photo for " + fileNames[i] + closeDescTag);
-                image = openList + (i+1) +"'>" + photos[i] + captions[i] + descs[i] + closeList;
-                imageList.push(image);
-                // console.log(image);
-            }
-
-            var imageListStr = "";
-            for (i=0; i<10; i++) {
-                imageListStr += imageList[i];
-            }
-
-            document.getElementById("cat_Adoption_Photo").innerHTML = imageListStr;
-            
-        </script>
 
     </div>
     

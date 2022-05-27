@@ -81,7 +81,6 @@ nav ul li:hover {
 
 /* Footer Area */
 
-/* Footer */
 footer {
     width: 100%;
     height: 155px;
@@ -271,4 +270,16 @@ input[type="text"] {
     display: block;
     margin: 0px 0px 0px 1em;
     width: 500px;
+}
+
+/* Adoption_info html li senction */
+#adoption_Info .adoptTips {
+    list-style-type: None;
+    display: inline-block;
+    margin-left: 20px;
+    box-shadow: 3px 3px 5px #888;
+    padding: 20px;
+    /* background-color: green; */
+    border: 2px solid #888;
+    border-radius: 20px;
 }
