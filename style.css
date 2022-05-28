@@ -210,6 +210,7 @@ td:first-child {
 }
 #adoption_Info #cat_Adoption_Photo li .description:hover {
     visibility: visible;
+    cursor: pointer;
 }
 
 /* Photo Section in Adoption_Info page End*/
@@ -287,3 +288,41 @@ input[type="text"] {
     border-radius: 20px;
 }
 
+/* Gallery Page Area */
+#info_box {
+    float: left;
+    border: 1px solid #000;
+    background-color: #002734;
+    opacity: 0.7;
+    width: 300px;
+    height: 200px;
+    position: relative;
+    /* top: -400px; */
+    visibility: hidden;
+}
+#info_box_heading {
+    color: #fff;
+    background-color: #002734;
+    display: block;
+
+}
+#info_box_p1 {
+    display: block;
+    color: #fff;
+}
+#info_box_p2 {
+    display: block;
+    color: #fff;
+}
+
+#info_box_close {
+    display: block;
+    color: #fff;
+    text-indent: 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#info_box_close:hover {
+    cursor: pointer;
+}

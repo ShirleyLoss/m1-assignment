@@ -92,12 +92,13 @@
 
             <div id="info_box">
                 <h4 id="info_box_heading"></h4>
-                <p id="info_box_p"></p>
-                <p id="in_box_close"></p>
+                <p id="info_box_p1"></p>
+                <p id="info_box_p2"></p>
+                <p id="info_box_close"></p>
             </div>
             <!-- Image Area End -->
 
-            <img src="images/cat_Adopting_Info_Area_Photo.jpeg" alt="Cute Cat Photo">
+            <img src="images/cat_Adopting_Info_Area_Photo.jpeg" alt="Cute Cat Photo" id="check">
 
         </main>
         <!-- Main Area End -->
@@ -159,14 +160,18 @@
             //Info box var
             var infoBoxArr = ["I am a very sweet, silly, and smart cat!", " Some of my favorite hobbies include getting cheek scratches, chasing a wand toy, and munching on tasty fishy treats!", " I enjoy tall perches!", "I like to sunbathe! There's nothing better than a great cat-nap in a warm sunny spot!", "I have a natural smile!"];
             var fileNames = ["Fifi", "Toothless", "Henry", "Marvin", "Rosie", "Jasper", "Mini", "Dexter", "Billiam", "Sahara"];
+            var info_box = document.getElementById("info_box");
+            var info_box_heading = document.getElementById("info_box_heading");
+            var info_box_p1 = document.getElementById("info_box_p1");
+            var info_box_p2 = document.getElementById("info_box_p2");
+            var info_box_close = document.getElementById("info_box_close");
 
             function infoBoxClick(i){
-                var info_box_heading = document.getElementById("info_box_heading");
-                var info_box_p = document.getElementById("info_box_p");
-                var info_box_close = document.getElementById("info_box_close");
                 info_box_heading.innerHTML = "Photo for " + fileNames[i];
-                info_box_p.innerHTML = infoBoxArr[(i%5)] + "<br>" + infoBoxArr[(i+1)%5];
+                info_box_p1.innerHTML = infoBoxArr[(i%5)];
+                info_box_p2.innerHTML = infoBoxArr[(i+1)%5];
                 info_box_close.innerHTML = "Click This To Close";
+                info_box.style.visibility = "visible";
             }
             var photo1 = document.getElementById("photo1");
             var photo2 = document.getElementById("photo2");
@@ -178,16 +183,42 @@
             var photo8 = document.getElementById("photo8");
             var photo9 = document.getElementById("photo9");
             var photo10 = document.getElementById("photo10");
-            photo1.addEventListener("click", infoBoxClick(0));
-            photo2.addEventListener("click", infoBoxClick(1));
-            photo3.addEventListener("click", infoBoxClick(2));
-            photo4.addEventListener("click", infoBoxClick(3));
-            photo5.addEventListener("click", infoBoxClick(4));
-            photo6.addEventListener("click", infoBoxClick(5));
-            photo7.addEventListener("click", infoBoxClick(6));
-            photo8.addEventListener("click", infoBoxClick(7));
-            photo9.addEventListener("click", infoBoxClick(8));
-            photo10.addEventListener("click", infoBoxClick(9));
+            photo1.addEventListener("click", function(){
+                infoBoxClick(0);
+            });
+            photo2.addEventListener("click", function(){
+                infoBoxClick(1);
+            });
+            photo3.addEventListener("click", function(){
+                infoBoxClick(2);
+            });
+            photo4.addEventListener("click", function(){
+                infoBoxClick(3);
+            });
+            photo5.addEventListener("click", function(){
+                infoBoxClick(4);
+            });
+            photo6.addEventListener("click", function(){
+                infoBoxClick(5);
+            });
+            photo7.addEventListener("click", function(){
+                infoBoxClick(6);
+            });
+            photo8.addEventListener("click", function(){
+                infoBoxClick(7);
+            });
+            photo9.addEventListener("click", function(){
+                infoBoxClick(8);
+            });
+            photo10.addEventListener("click", function(){
+                infoBoxClick(9);
+            });
+
+            function infoClose(){
+                info_box.style.visibility = "hidden"
+            }
+            info_box_close.addEventListener("click", infoClose);
+
             
         </script>
 
