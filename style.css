@@ -208,6 +208,9 @@ td:first-child {
 #adoption_Info #cat_Adoption_Photo li img:hover ~.description{
     visibility: visible;
 }
+#adoption_Info #cat_Adoption_Photo li .description:hover {
+    visibility: visible;
+}
 
 /* Photo Section in Adoption_Info page End*/
 

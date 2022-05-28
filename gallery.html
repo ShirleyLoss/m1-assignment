@@ -89,6 +89,12 @@
                     </li> -->
                 </ul>
             </section>
+
+            <div id="info_box">
+                <h4 id="info_box_heading"></h4>
+                <p id="info_box_p"></p>
+                <p id="in_box_close"></p>
+            </div>
             <!-- Image Area End -->
 
             <img src="images/cat_Adopting_Info_Area_Photo.jpeg" alt="Cute Cat Photo">
@@ -131,18 +137,6 @@
             var openList = "<li id='photo";
             var closeList = "</li>";
             var imageList = [];
-            //Info box var
-            var infoBoxOpen = "<span class='info_box'>";
-            var infoBoxClose = "</span>";
-            var h4Open = "<h4>";
-            var h4Close = "</h4>";
-            var infoBoxArr = ["I am a very sweet, silly, and smart cat!", " Some of my favorite hobbies include getting cheek scratches, chasing a wand toy, and munching on tasty fishy treats!", " I enjoy tall perches!", "I enjoy tall perches!", "I like to sunbathe! There's nothing better than a great cat-nap in a warm sunny spot!", "I have a natural smile!"];
-            var infoBoxPOpen = "<p class='info_box_p'>"
-            var infoBoxPClose = "</p>"
-            var infoBoxP1 = "";
-            var infoBoxP2 = "";
-            var infoBoxClickClose = "<p class='infoBoxClickClose'>Click This To Close</p>";
-            var photoInfo = ""
 
             for (i = 0; i < 10; i++) {
                 photoTitle = "Photo for " + fileNames[i]
@@ -150,11 +144,7 @@
                 photos.push("<img src='images/" + fileNames[i] + ".jpeg' alt='" + fileNames[i]+"'>");
                 captions.push(openCaptionTag + fileNames[i] + closeCaptionTag);
                 descs.push(openDescTag + photoTitle + closeDescTag);
-                // Info box combination
-                infoBoxP1 = infoBoxArr[i%5];
-                infoBoxP2 = infoBoxArr[(i+1)%5]; 
-                photoInfo = infoBoxOpen + h4Open + photoTitle + h4Close + infoBoxPOpen + infoBoxP1 + infoBoxPClose + infoBoxPOpen + infoBoxP2 + infoBoxPClose + infoBoxClickClose + infoBoxClose;
-                image = openList + (i+1) +"'>" + photos[i] + captions[i] + descs[i] + photoInfo + closeList;
+                image = openList + (i+1) +"'>" + photos[i] + captions[i] + descs[i] + closeList;
                 imageList.push(image);
                 // console.log(image);
             }
@@ -165,6 +155,39 @@
             }
 
             document.getElementById("cat_Adoption_Photo").innerHTML = imageListStr;
+
+            //Info box var
+            var infoBoxArr = ["I am a very sweet, silly, and smart cat!", " Some of my favorite hobbies include getting cheek scratches, chasing a wand toy, and munching on tasty fishy treats!", " I enjoy tall perches!", "I like to sunbathe! There's nothing better than a great cat-nap in a warm sunny spot!", "I have a natural smile!"];
+            var fileNames = ["Fifi", "Toothless", "Henry", "Marvin", "Rosie", "Jasper", "Mini", "Dexter", "Billiam", "Sahara"];
+
+            function infoBoxClick(i){
+                var info_box_heading = document.getElementById("info_box_heading");
+                var info_box_p = document.getElementById("info_box_p");
+                var info_box_close = document.getElementById("info_box_close");
+                info_box_heading.innerHTML = "Photo for " + fileNames[i];
+                info_box_p.innerHTML = infoBoxArr[(i%5)] + "<br>" + infoBoxArr[(i+1)%5];
+                info_box_close.innerHTML = "Click This To Close";
+            }
+            var photo1 = document.getElementById("photo1");
+            var photo2 = document.getElementById("photo2");
+            var photo3 = document.getElementById("photo3");
+            var photo4 = document.getElementById("photo4");
+            var photo5 = document.getElementById("photo5");
+            var photo6 = document.getElementById("photo6");
+            var photo7 = document.getElementById("photo7");
+            var photo8 = document.getElementById("photo8");
+            var photo9 = document.getElementById("photo9");
+            var photo10 = document.getElementById("photo10");
+            photo1.addEventListener("click", infoBoxClick(0));
+            photo2.addEventListener("click", infoBoxClick(1));
+            photo3.addEventListener("click", infoBoxClick(2));
+            photo4.addEventListener("click", infoBoxClick(3));
+            photo5.addEventListener("click", infoBoxClick(4));
+            photo6.addEventListener("click", infoBoxClick(5));
+            photo7.addEventListener("click", infoBoxClick(6));
+            photo8.addEventListener("click", infoBoxClick(7));
+            photo9.addEventListener("click", infoBoxClick(8));
+            photo10.addEventListener("click", infoBoxClick(9));
             
         </script>
 
