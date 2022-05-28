@@ -172,6 +172,9 @@
                 info_box_p2.innerHTML = infoBoxArr[(i+1)%5];
                 info_box_close.innerHTML = "Click This To Close";
                 info_box.style.visibility = "visible";
+                info_box.style.left = event.clientX + "px";
+                info_box.style.top = event.clientY + "px"
+
             }
             var photo1 = document.getElementById("photo1");
             var photo2 = document.getElementById("photo2");
