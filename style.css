@@ -132,7 +132,6 @@ footer #nondisclaimer .social .fa-instagram{
 /* Footer Area End */
 
 /* Table Section */
-
 table {
     width: 1000px;
     margin: 1em auto 0 auto;
@@ -262,6 +261,9 @@ input[type="radio"] {
     margin-top: 1em;
 }
 textarea {
+    margin-left: 1em;
+}
+#contact_method {
     margin-left: 1em;
 }
 
