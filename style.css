@@ -266,6 +266,9 @@ textarea {
 #contact_method {
     margin-left: 1em;
 }
+#contact_Info_Input {
+    visibility: hidden;
+}
 
 /* Form Section - Adoption_info html */
 input[type="checkbox"] {
