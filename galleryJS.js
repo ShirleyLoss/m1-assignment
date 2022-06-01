@@ -49,46 +49,14 @@ function infoBoxClick(i){
     info_box.style.top = event.clientY + "px"
 
 }
-var photo1 = document.getElementById("photo1");
-var photo2 = document.getElementById("photo2");
-var photo3 = document.getElementById("photo3");
-var photo4 = document.getElementById("photo4");
-var photo5 = document.getElementById("photo5");
-var photo6 = document.getElementById("photo6");
-var photo7 = document.getElementById("photo7");
-var photo8 = document.getElementById("photo8");
-var photo9 = document.getElementById("photo9");
-var photo10 = document.getElementById("photo10");
-photo1.addEventListener("click", function(){
-    infoBoxClick(0);
-});
-photo2.addEventListener("click", function(){
-    infoBoxClick(1);
-});
-photo3.addEventListener("click", function(){
-    infoBoxClick(2);
-});
-photo4.addEventListener("click", function(){
-    infoBoxClick(3);
-});
-photo5.addEventListener("click", function(){
-    infoBoxClick(4);
-});
-photo6.addEventListener("click", function(){
-    infoBoxClick(5);
-});
-photo7.addEventListener("click", function(){
-    infoBoxClick(6);
-});
-photo8.addEventListener("click", function(){
-    infoBoxClick(7);
-});
-photo9.addEventListener("click", function(){
-    infoBoxClick(8);
-});
-photo10.addEventListener("click", function(){
-    infoBoxClick(9);
-});
+
+for (i=0; i<10; i++){
+    var photoId = "photo" + (i+1);
+    document.getElementById(photoId).addEventListener("click", function(){
+        infoBoxClick(i);
+    });
+}
+
 
 function infoClose(){
     info_box.style.visibility = "hidden"

@@ -10,9 +10,9 @@ h3 {
     background-color: #ffebdd;
     text-align: center;
 }
-p {
+/* p {
     text-indent: 30px;
-}
+} */
 
 #container {
     width: 80%;
@@ -303,6 +303,7 @@ input[type="text"] {
     height: 200px;
     position: absolute;
     visibility: hidden;
+    padding: 10px;
     /* left: 50%;
     top: 50%; */
 }
@@ -310,6 +311,8 @@ input[type="text"] {
     color: #fff;
     background-color: #002734;
     display: block;
+    font-size: 24px;
+    margin-bottom: 16px;
 
 }
 #info_box_p1 {
