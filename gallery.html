@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Reference JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <title>Adopt the Perfect Cat</title>
     <link rel="stylesheet" href="style.css">
@@ -91,12 +93,20 @@
                 </ul>
             </section>
 
+            <!-- Info box -->
             <div id="info_box">
                 <h4 id="info_box_heading"></h4>
                 <p id="info_box_p1"></p>
                 <p id="info_box_p2"></p>
                 <p id="info_box_close"></p>
             </div>
+
+            <!-- Large Photo box -->
+            <div class="backdrop"></div>
+            <div class="largePhotoBox">
+                <div class="close">x</div>
+            </div>
+
             <!-- Image Area End -->
 
             <img src="images/cat_Adopting_Info_Area_Photo.jpeg" alt="Cute Cat Photo" id="check">

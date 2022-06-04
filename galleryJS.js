@@ -8,7 +8,7 @@ var openDescTag = "<span class='description'>";
 var closeDescTag = "</span>";
 var descs = [];
 var image;
-var openList = "<li id='photo";
+var openList = "<li class='photos' id='photo";
 var closeList = "</li>";
 var imageList = [];
 
@@ -18,7 +18,7 @@ for (i = 0; i < 10; i++) {
     photos.push("<img src='images/" + fileNames[i] + ".jpeg' alt='" + fileNames[i]+"'>");
     captions.push(openCaptionTag + fileNames[i] + closeCaptionTag);
     descs.push(openDescTag + photoTitle + closeDescTag);
-    image = openList + (i+1) +"'>" + photos[i] + captions[i] + descs[i] + closeList;
+    image = openList + i +"'>" + photos[i] + captions[i] + descs[i] + closeList;
     imageList.push(image);
     // console.log(image);
 }
@@ -51,8 +51,8 @@ function infoBoxClick(i){
 }
 
 for (i=0; i<10; i++){
-    var photoId = "photo" + (i+1);
-    document.getElementById(photoId).addEventListener("click", function(){
+    var photoId = "photo" + (i);
+    document.getElementsByClassName('description')[i].addEventListener("click", function(){
         infoBoxClick(i);
     });
 }
@@ -62,3 +62,37 @@ function infoClose(){
     info_box.style.visibility = "hidden"
 }
 info_box_close.addEventListener("click", infoClose);
+
+$(document).ready(function(){
+    // Open image on button click
+    $(".photos").click(function(event){
+        if ($(event.target).attr('class') == 'description'){
+            return false;
+        }
+        $(".backdrop").animate({'opacity':'.50'}, 300, 'linear').css('display', 'block');
+        $('.largePhotoBox').fadeIn();
+
+        //Check if largePhotoBox has an image
+        if($('.largePhotoBox').contents('img')){
+            $('.largePhotoBox').contents().remove('img'); //If true, remove image
+        }
+
+        //Get text content in attribute
+        var $idValue = $(this).attr('id');
+        console.log($idValue);
+        for(i=0; i<10; i++){
+            if($idValue == "photo"+i){
+                var $img = $('#photo'+i+' img').clone();
+                $('.largePhotoBox').append($img); //Insert duplicated element in another element
+            }
+        }
+    });
+
+    //Click to close lightbox
+    $('.close, .backdrop').click(function(event){
+        $('.backdrop').animate({'opacity':'0'}, 300, 'linear', function(){
+            $('.backdrop').css('display', 'none');
+        });
+        $('.largePhotoBox').fadeOut();
+    })
+})
